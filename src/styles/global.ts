@@ -11,8 +11,8 @@ export const globalStyles = globalCss({
   body: {
     '-webkit-font-smoothing': 'antialiased',
     fontFamily: 'Roboto Slab, serif',
-    background: '#fff',
-    color: '#000'
+    background: '$gray800',
+    color: '$green300'
   },
 
   'h1, h2, h3, h4, h5, h6, strong': {
