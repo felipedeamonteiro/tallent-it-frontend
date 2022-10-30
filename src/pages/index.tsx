@@ -58,7 +58,7 @@ const Button = styled('button', {
 
 export default function Home() {
   const [users, setUsers] = useState<usersData[]>([]);
-  const [posts, setPosts] = useState<postsData>([]);
+  const [posts, setPosts] = useState<postsData[]>([]);
   const [errors, setErrors] = useState<string[]>([]);
   const [showErrors, setShowErrors] = useState<boolean>(false);
   const [letter, setLetter] = useState<lettersData[]>([]);
@@ -117,7 +117,7 @@ export default function Home() {
         ? <div>Deu erro!</div> 
         : (
           <div>
-            {JSON.stringify(letter)}
+            {JSON.parse(letter.toString())}
           </div>
         )
       }
