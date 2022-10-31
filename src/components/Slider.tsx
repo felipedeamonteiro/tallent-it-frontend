@@ -4,7 +4,11 @@ import { Container } from '../styles/components/Slider';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import { lettersData, lettersPostsData } from '../pages/index';
 
-const Slider: React.FC = ({ data }) => {
+interface SliderProps {
+  data: lettersData[]
+};
+
+const Slider: React.FC<SliderProps> = ({ data }) => {
 
   const slideLeft = () => {
     const slider = document.getElementById('slider');

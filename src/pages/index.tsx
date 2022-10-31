@@ -128,7 +128,10 @@ export default function Home() {
       
       {errors.length > 0 
         ? <div>Error</div> 
-        : <Slider data={letter} />
+        : (letter.length > 0 
+          ? (<Slider data={letter} />)
+          : ''
+        )
       }
     </Container>
   )
