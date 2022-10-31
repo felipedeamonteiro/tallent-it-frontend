@@ -1,6 +1,7 @@
 import { styled } from '../styles';
 import { useState, useEffect } from 'react';
 import api from '../services/api';
+import Slider from '../components/Slider';
 
 interface usersData {
   id: number;
@@ -33,13 +34,13 @@ interface postsData {
   body: string;
 }
 
-interface lettersPostsData {
+export interface lettersPostsData {
   id: number;
   title: string;
   body: string;
 }
 
-interface lettersData {
+export interface lettersData {
   id: number;
   name: string; 
   username: string;
@@ -54,6 +55,16 @@ interface lettersData {
 
 const Button = styled('button', {
   backgroundColor: '$rocketseat'
+})
+
+const Container = styled('div', {
+  '.page-title': {
+    color: '$greenBlue'
+  },
+
+  '.text-data': {
+    color: '$greenBlue'
+  }
 })
 
 export default function Home() {
@@ -93,6 +104,7 @@ export default function Home() {
           body: userPost.body
         }
       });
+      
       return {
         id: user.id,
         name: user.name,
@@ -110,17 +122,14 @@ export default function Home() {
   }
 
   return (
-    <>
-      <h1>Tallent IT Frontend Test</h1>
+    <Container>
+      <h1 className="page-title">Tallent IT Frontend Test</h1>
       <Button onClick={getLetter} >Mah Oeeee!</Button>
+      
       {errors.length > 0 
-        ? <div>Deu erro!</div> 
-        : (
-          <div>
-            {JSON.parse(letter.toString())}
-          </div>
-        )
+        ? <div>Error</div> 
+        : <Slider data={letter} />
       }
-    </>
+    </Container>
   )
 }
