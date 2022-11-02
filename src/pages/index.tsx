@@ -54,12 +54,32 @@ export interface lettersData {
 
 
 const Button = styled('button', {
-  backgroundColor: '$rocketseat'
+  marginTop: '30px',
+  backgroundColor: '$rocketseat',
+  border: 'none',
+  padding: '10px',
+  fontSize: '14px',
+  borderRadius: 8,
+  color: '#FFF',
+  fontStyle: 'Roboto',
+  fontWeight: 'bold',
+
+  '&:hover': {
+    opacity: '0.8'
+  }
 })
 
 const Container = styled('div', {
+  padding: '90px 50px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  flexDirection: 'column',
+
+
   '.page-title': {
-    color: '$greenBlue'
+    color: '$greenBlue',
+    fontWeight: 'bold',
   },
 
   '.text-data': {
@@ -124,7 +144,7 @@ export default function Home() {
   return (
     <Container>
       <h1 className="page-title">Tallent IT Frontend Test</h1>
-      <Button onClick={getLetter} >Mah Oeeee!</Button>
+      <Button onClick={getLetter} >Click to get data</Button>
       
       {errors.length > 0 
         ? <div>Error</div> 

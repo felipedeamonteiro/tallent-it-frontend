@@ -1,6 +1,8 @@
 import { styled } from '../index';
 
 export const Container = styled('div', {
+  marginTop: '30px',
+  padding: '0 40px',
   width: '90%',
   height: '546px',
   position: 'relative',
@@ -25,7 +27,7 @@ export const Container = styled('div', {
       width: '500px',
       height: '500px',
       boxShadow: '5px 5px 5px rgb(182, 192, 209, 0.5)',
-      background: '#FFF',
+      background: '#E5E5E0',
       borderRadius: '20px',
       display: 'inline-block',
       margin: '0 5px',
@@ -54,6 +56,7 @@ export const Container = styled('div', {
     cursor: 'pointer',
     opacity: '0.5',
     transition: 'opacity 0.2s',
+    boxShadow: '3px 2px 3px rgb(182, 192, 209, 0.5)',
 
     '&.left': {
       left: 0,
