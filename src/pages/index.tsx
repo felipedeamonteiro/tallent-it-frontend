@@ -54,7 +54,7 @@ export interface lettersData {
 
 
 const Button = styled('button', {
-  marginTop: '30px',
+  marginTop: '15px',
   backgroundColor: '$rocketseat',
   border: 'none',
   padding: '10px',
@@ -63,14 +63,16 @@ const Button = styled('button', {
   color: '#FFF',
   fontStyle: 'Roboto',
   fontWeight: 'bold',
+  transition: 'opacity 0.2s',
 
   '&:hover': {
-    opacity: '0.8'
+    opacity: '0.8',
+    transition: 'opacity 0.2s'
   }
 })
 
 const Container = styled('div', {
-  padding: '90px 50px',
+  padding: '20px 50px 90px 50px',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
@@ -80,6 +82,7 @@ const Container = styled('div', {
   '.page-title': {
     color: '$greenBlue',
     fontWeight: 'bold',
+    fontSize: '36px'
   },
 
   '.text-data': {
@@ -138,13 +141,24 @@ export default function Home() {
       }
     });
 
-    setLetter(letterObject);
+    if (letter.length > 0) {
+      setLetter([]);
+    } else {
+      setLetter(letterObject);
+    }
+
+    
   }
 
   return (
     <Container>
       <h1 className="page-title">Tallent IT Frontend Test</h1>
-      <Button onClick={getLetter} >Click to get data</Button>
+      <Button onClick={getLetter}>
+        {letter.length > 0 ? 
+        'Click to remove data' :
+        'Click to get data'
+        }
+      </Button>
       
       {errors.length > 0 
         ? <div>Error</div> 
