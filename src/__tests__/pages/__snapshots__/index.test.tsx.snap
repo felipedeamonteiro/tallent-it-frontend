@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders a the Homepage 1`] = `
+<div>
+  <div
+    class="c-kXlFrX"
+  >
+    <h1
+      class="page-title"
+    >
+      Tallent IT Frontend Test
+    </h1>
+    <button
+      class="c-fbJfXZ"
+    >
+      Click to get data
+    </button>
+  </div>
+</div>
+`;
