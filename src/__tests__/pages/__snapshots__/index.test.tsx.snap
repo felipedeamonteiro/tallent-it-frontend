@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home renders a the Homepage 1`] = `
+exports[`Home should render the Homepage 1`] = `
 <div>
   <div
-    class="c-kXlFrX"
+    class="c-jnBUHk"
   >
     <h1
       class="page-title"
