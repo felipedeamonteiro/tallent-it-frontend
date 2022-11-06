@@ -30,4 +30,6 @@ npm run test
 
 Here you can access the project on production. It is hosted by vercel.
 
+https://tallent-it-frontend.vercel.app/
+
 ### Enjoy!
